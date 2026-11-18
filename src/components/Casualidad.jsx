@@ -40,7 +40,7 @@ export default function Casualidad() {
         </i>
         <h2 className="cas__word">
           La<br />
-          casualidad.
+          casualidad no existen 
         </h2>
         <p className="cas__sub">Septiembre de 2026. Ninguno de los dos lo planeó.</p>
         <p className="cas__down">Él miró hacia arriba.</p>

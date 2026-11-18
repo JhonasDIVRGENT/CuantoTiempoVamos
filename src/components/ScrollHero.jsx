@@ -142,8 +142,8 @@ export default function ScrollHero({ images, ready }) {
         <Hud />
 
         <div className="beat beat--intro">
-          <span className="kicker">Septiembre de 2026</span>
-          <h1 className="beat__title">La lluvia<br />nunca se detiene.</h1>
+          <span className="kicker">Noviembre de 2026</span>
+          <h1 className="beat__title">El sol<br />esta insoportable.</h1>
         </div>
 
         <div className="beat beat--left" data-beat>
@@ -160,11 +160,11 @@ export default function ScrollHero({ images, ready }) {
         </div>
 
         <div className="beat beat--final">
-          <span className="kicker">Una historia de amor de Jhonas y</span>
+          <span className="kicker">Un recordatorio para</span>
           <h2 className="beat__hero" data-text="Karla" aria-label="Karla">
             <span ref={nameRef}>Karla</span>
           </h2>
-          <p className="beat__since">Y todavía hablan cada noche.</p>
+          <p className="beat__since">Cada noche hablamos aún.</p>
         </div>
 
         <div className="scroll-hint" aria-hidden="true">

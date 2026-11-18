@@ -12,7 +12,7 @@ export default function Hud() {
         <b>K-A-R-L-A</b>
       </div>
       <div className="hud__block hud__block--tr">
-        <span>Sincronía</span>
+        <span>Amor</span>
         <b data-sync>000%</b>
         <span data-frame>FR 001/150</span>
       </div>
