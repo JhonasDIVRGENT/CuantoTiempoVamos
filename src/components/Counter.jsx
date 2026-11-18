@@ -39,7 +39,7 @@ export default function Counter() {
 
       <div className="counter__inner">
         <h2 className="counter__title" id="counter-title">
-          Jhonas y Karla llevan enamorados desde .
+          Jhonas y Karla llevan enamorados desde Septiembre.
           <span>Cada noche, el mismo mundo. Se hablan, se miran y no pueden tocarse.</span>
         </h2>
 
