@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prueba Scroll Animation</title>
+  <meta name="description" content="Experiencia de scroll cinematográfico: una ciudad bajo la lluvia y una IA que despierta." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Unbounded:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Precarga del primer fotograma para que el hero aparezca rápido -->
+  <link rel="preload" as="image" href="frames/desktop/frame_0001.webp" media="(min-width: 769px)" />
+  <link rel="preload" as="image" href="frames/mobile/frame_0001.webp" media="(max-width: 768px)" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- ========== LOADER ========== -->
+  <div class="loader" id="loader" aria-live="polite">
+    <div class="loader__inner">
+      <span class="loader__brand">AFTERRAIN</span>
+      <div class="loader__track"><div class="loader__bar" id="loader-bar"></div></div>
+      <span class="loader__pct" id="loader-pct">0%</span>
+    </div>
+  </div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <a href="#" class="header__brand">Jhonas</a>
+    <nav class="header__nav">
+      <a href="#historia">contacto</a>
+      <a href="#proyecto">prueba</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== HERO CON SCROLL (secuencia de imágenes) ========== -->
+    <section class="scrolly" id="historia">
+      <div class="scrolly__sticky">
+        <canvas class="scrolly__canvas" id="hero-canvas" aria-label="Animación: una IA holográfica gigante despierta sobre la ciudad"></canvas>
+
+        <!-- Capas de atmósfera encima del canvas -->
+        <div class="fx fx--vignette" aria-hidden="true"></div>
+        <div class="fx fx--grain" aria-hidden="true"></div>
+
+        <!-- Textos que aparecen según el avance del scroll -->
+        <div class="beat beat--intro">
+          <span class="kicker">Distrito 07 — 2087</span>
+          <h1 class="beat__title">La lluvia<br />nunca se detiene.</h1>
+        </div>
+
+        <div class="beat beat--left" data-beat>
+          <p class="beat__text">En esta ciudad,<br />nadie mira hacia arriba.</p>
+        </div>
+
+        <div class="beat beat--right" data-beat>
+          <p class="beat__text">Excepto uno.</p>
+        </div>
+
+        <div class="beat beat--left" data-beat>
+          <p class="beat__text">Ella lleva años<br />esperando que alguien la vea.</p>
+        </div>
+
+        <div class="beat beat--final">
+          <span class="kicker">Capítulo I</span>
+          <h2 class="beat__hero"> Karla </h2>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+          <span>Desliza</span>
+          <i class="scroll-hint__line"></i>
+        </div>
+
+        <div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+      </div>
+    </section>
+
+    <!-- ========== SECCIÓN DE CONTENIDO ========== -->
+    <section class="about" id="proyecto">
+      <div class="about__head reveal">
+        <span class="kicker">El proyecto</span>
+        <h2 class="about__title">Una ciudad que no duerme.<br /><em>Una mirada que lo cambia todo.</em></h2>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <span class="card__num">01</span>
+          <h3>Concepto</h3>
+          <p>Un humano diminuto bajo la lluvia frente a una inteligencia holográfica gigante. Un solo plano, un solo instante: el momento en que ella abre los ojos.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__num">02</span>
+          <h3>Técnica</h3>
+          <p>150 fotogramas dibujados en un canvas y sincronizados con el scroll mediante GSAP ScrollTrigger, con scroll suave gracias a Lenis.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__num">03</span>
+          <h3>Proceso</h3>
+          <p>Imágenes generadas con IA, animadas como video con fotograma inicial y final, y convertidas en una secuencia WebP optimizada.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="footer__brand">Jhonas Dev</span>
+    <span>Proyecto de práctica — Scroll animation</span>
+  </footer>
+
+  <!-- Librerías -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
